@@ -1,4 +1,5 @@
-<div refs="page-comments@form-container" hidden class="comment-branch mb-m">
+// <div refs="page-comments@form-container" hidden class="comment-branch mb-m">
+<div refs="page-comments@form-container">
     <div class="comment-box">
 
         <div class="header p-s">{{ trans('entities.comment_new') }}</div>
