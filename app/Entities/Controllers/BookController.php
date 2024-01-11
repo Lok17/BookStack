@@ -42,8 +42,9 @@ class BookController extends Controller
             'created_at' => trans('common.sort_created_at'),
             'updated_at' => trans('common.sort_updated_at'),
         ]);
+        $perPage = 6;
 
-        $books = $this->bookRepo->getAllPaginated(18, $listOptions->getSort(), $listOptions->getOrder());
+        $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
         foreach ($books as $book) {
             if (auth()->check()) {
                 $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
